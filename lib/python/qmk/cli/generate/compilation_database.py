@@ -166,4 +166,4 @@ def generate_compilation_database(cli: MILC) -> Union[bool, int]:
         cli.log.error('Could not determine keymap!')
 
     target = KeyboardKeymapBuildTarget(current_keyboard, current_keymap)
-    return target.generate_compilation_database()
+    return target.generate_compilation_database(skip_clean=True)
