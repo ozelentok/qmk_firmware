@@ -158,7 +158,7 @@ class BuildTarget:
         return ret
 
     def compile(self, build_target: str = None, dry_run: bool = False, **env_vars) -> None:
-        if self._clean or self._compiledb:
+        if self._clean:
             command = [find_make(), "clean"]
             if dry_run:
                 command.append('-n')
